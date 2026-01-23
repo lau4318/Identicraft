@@ -3,12 +3,6 @@
 
 A Minecraft avatar rendering library, CLI, and serverless API.
 
-<p align="center">
-<img src="https://img.shields.io/badge/Javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
-<img src="https://img.shields.io/badge/Vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white">
-<img src="https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white">
-</p>
-
 ## Features
 1. 🎨 Custom rendering using @napi-rs/canvas
 2. ⚡ Serverless deployment on Vercel
@@ -268,8 +262,11 @@ Respects Mojang's API rate limits. Consider implementing your own rate limiting 
 
 ## Credits
 
-Built with:
-- [@napi-rs/canvas](https://github.com/Brooooooklyn/canvas) for image rendering
-- [Commander.js](https://github.com/tj/commander.js) for CLI tool
-- Mojang API for player data
-- Vercel for serverless hosting
+Many Thanks for making this project possible.
+
+- [![canvas](https://img.shields.io/badge/CANVAS-for_image_rendering-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://github.com/Brooooooklyn/canvas)
+- [![commander.js](https://img.shields.io/badge/COMMANDER.js-for_cli_tool-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://github.com/tj/commander.js)
+- [![js.org](https://img.shields.io/badge/JS.ORG-for_Custom_Domain_Branding-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://github.com/js-org/js.org)
+- [![npm](https://img.shields.io/badge/NPM-for_package_distribution-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/identicraft)
+- [![mojang_api](https://img.shields.io/badge/MOJANG_API-for_player_data-%23CB3837.svg?style=for-the-badge&logo=mojang&logoColor=white)](https://api.mojang.com)
+- [![vercel](https://img.shields.io/badge/VERCEL-for_serverless_hosting-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)
